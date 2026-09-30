@@ -1,0 +1,43 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": [
+    "ultracite/biome/core",
+    "ultracite/biome/next",
+    "ultracite/biome/react"
+  ],
+  "files": {
+    "includes": [
+      "src/**",
+      "*.ts",
+      "*.mjs",
+      "*.json",
+      "*.jsonc",
+      "!public",
+      "!.figma",
+      "!.next",
+      "!node_modules"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "performance": {
+        "noImgElement": "off",
+        "noJsxPropsBind": "off"
+      },
+      "correctness": {
+        "useImageSize": "off"
+      },
+      "style": {
+        "useFilenamingConvention": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off",
+        "noLeakedRender": "off"
+      },
+      "a11y": {
+        "useValidAnchor": "off",
+        "useButtonType": "off"
+      }
+    }
+  }
+}
