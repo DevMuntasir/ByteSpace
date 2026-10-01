@@ -40,3 +40,10 @@ export interface Stat {
     label: string;
     value: string;
 }
+export interface Testimonial {
+    avatar: string;
+    id: string;
+    name: string;
+    quote: string;
+    role: string;
+}
