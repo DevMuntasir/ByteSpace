@@ -2,8 +2,8 @@ import { PARTNERS } from "../../data";
 
 export function PartnersSection() {
   return (
-    <section className="flex h-[202px] items-end justify-center overflow-hidden bg-brand-gray-100 pb-[40px]">
-      <div className="flex items-end gap-[72px]">
+    <section className="flex items-end justify-center overflow-hidden bg-brand-gray-100 py-brand-lg">
+      <div className="flex items-end gap-50 lg:gap-[72px]">
         {PARTNERS.map((partner) => (
           <div
             className="relative flex-shrink-0"

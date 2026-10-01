@@ -17,3 +17,8 @@ export interface Partner {
     name: string;
     width: number;
 }
+export interface Category {
+    icon: string;
+    id: string;
+    name: string;
+}

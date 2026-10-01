@@ -1,4 +1,5 @@
 import type {
+    Category,
     FooterColumn,
     NavLink,
     Partner,
@@ -50,4 +51,13 @@ export const PARTNERS: Partner[] = [
     { height: 41, logo: `${A}/partner-3.svg`, name: "Partner 3", width: 170 },
     { height: 41, logo: `${A}/partner-4.svg`, name: "Partner 4", width: 170 },
     { height: 42, logo: `${A}/partner-5.svg`, name: "Partner 5", width: 169 },
+];
+
+export const FEATURED_CATEGORIES: Category[] = [
+    { icon: `${A}/cat-1.svg`, id: "1", name: "Design" },
+    { icon: `${A}/cat-2.svg`, id: "2", name: "Development" },
+    { icon: `${A}/cat-3.svg`, id: "3", name: "IT & Software" },
+    { icon: `${A}/cat-4.svg`, id: "4", name: "Business" },
+    { icon: `${A}/cat-5.svg`, id: "5", name: "Marketing" },
+    { icon: `${A}/cat-6.svg`, id: "6", name: "Photography" },
 ];
