@@ -1,0 +1,243 @@
+:root {
+  --brand-color-primary: #003be2;
+  --brand-color-primary-hover: #0030b8;
+  --brand-color-secondary: #d4fb20;
+  --brand-color-secondary-hover: #cbfc01;
+  --brand-color-accent: #c1e338;
+  --brand-color-purple: #7f30f7;
+  --brand-color-purple-dark: #300b6a;
+  --brand-color-dark: #040819;
+
+  --brand-color-text-primary: #242528;
+  --brand-color-text-secondary: #4b4c53;
+  --brand-color-text-muted: #82868e;
+  --brand-color-text-light: #f5f5f6;
+  --brand-color-text-white: #ffffff;
+  --brand-color-bg-white: #ffffff;
+  --brand-color-bg-subtle: #fafafa;
+  --brand-color-bg-muted: #f5f5f6;
+  --brand-color-bg-card: #ffffff;
+  --brand-color-bg-card-subtle: #f5f5f6;
+
+  --brand-color-border: #ced0d3;
+  --brand-color-border-subtle: #e5e6e8;
+  --brand-color-border-focus: #003be2;
+
+  --brand-gray-50: #f5f5f6;
+  --brand-gray-100: #e5e6e8;
+  --brand-gray-200: #ced0d3;
+  --brand-gray-300: #abaeb5;
+  --brand-gray-400: #82868e;
+  --brand-gray-700: #4b4c53;
+  --brand-gray-900: #3a3b3f;
+  --brand-gray-950: #242528;
+
+  --brand-font-primary: "Satoshi", sans-serif;
+  --brand-font-heading: "Poppins", sans-serif;
+  --brand-font-display: "Clash Display", sans-serif;
+
+  --brand-text-xs: 12px;
+  --brand-text-sm: 14px;
+  --brand-text-base: 16px;
+  --brand-text-md: 18px;
+  --brand-text-lg: 20px;
+  --brand-text-xl: 24px;
+  --brand-text-2xl: 32px;
+  --brand-text-3xl: 36px;
+  --brand-text-4xl: 44px;
+  --brand-text-5xl: 48px;
+  --brand-text-hero: 72px;
+
+  --brand-spacing-xs: 4px;
+  --brand-spacing-sm: 8px;
+  --brand-spacing-md: 16px;
+  --brand-spacing-lg: 24px;
+  --brand-spacing-xl: 32px;
+  --brand-spacing-2xl: 40px;
+  --brand-spacing-3xl: 48px;
+  --brand-spacing-4xl: 60px;
+  --brand-spacing-5xl: 72px;
+  --brand-spacing-section: 120px;
+
+  --brand-radius-xs: 4px;
+  --brand-radius-sm: 8px;
+  --brand-radius-md: 16px;
+  --brand-radius-lg: 24px;
+  --brand-radius-pill: 100px;
+  --brand-radius-full: 9999px;
+
+  --brand-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --brand-shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --brand-shadow-card:
+    0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --brand-shadow-hero:
+    51px 73px 72px rgba(0, 0, 0, 0.13), 26px 37px 36px rgba(0, 0, 0, 0.1);
+  --brand-shadow-float:
+    0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes brand-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes brand-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes brand-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes brand-pulse-glow {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes brand-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes brand-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@theme {
+  --color-brand-primary: var(--brand-color-primary);
+  --color-brand-primary-hover: var(--brand-color-primary-hover);
+  --color-brand-secondary: var(--brand-color-secondary);
+  --color-brand-secondary-hover: var(--brand-color-secondary-hover);
+  --color-brand-accent: var(--brand-color-accent);
+  --color-brand-purple: var(--brand-color-purple);
+  --color-brand-purple-dark: var(--brand-color-purple-dark);
+  --color-brand-dark: var(--brand-color-dark);
+
+  --color-brand-bg: var(--brand-color-bg-white);
+  --color-brand-bg-subtle: var(--brand-color-bg-subtle);
+  --color-brand-bg-muted: var(--brand-color-bg-muted);
+  --color-brand-card: var(--brand-color-bg-card);
+
+  --color-brand-text: var(--brand-color-text-primary);
+  --color-brand-text-secondary: var(--brand-color-text-secondary);
+  --color-brand-text-muted: var(--brand-color-text-muted);
+  --color-brand-text-light: var(--brand-color-text-light);
+  --color-brand-text-white: var(--brand-color-text-white);
+
+  --color-brand-border: var(--brand-color-border);
+  --color-brand-border-subtle: var(--brand-color-border-subtle);
+  --color-brand-border-focus: var(--brand-color-border-focus);
+
+  --color-brand-gray-50: var(--brand-gray-50);
+  --color-brand-gray-100: var(--brand-gray-100);
+  --color-brand-gray-200: var(--brand-gray-200);
+  --color-brand-gray-300: var(--brand-gray-300);
+  --color-brand-gray-400: var(--brand-gray-400);
+  --color-brand-gray-700: var(--brand-gray-700);
+  --color-brand-gray-900: var(--brand-gray-900);
+  --color-brand-gray-950: var(--brand-gray-950);
+
+  --color-brand-blue: var(--brand-color-primary);
+  --color-brand-lime: var(--brand-color-secondary);
+  --color-brand-lime-500: var(--brand-color-secondary-hover);
+  --color-brand-mindaro: var(--brand-color-accent);
+  --color-brand-violet: var(--brand-color-purple);
+  --color-brand-violet-dark: var(--brand-color-purple-dark);
+  --color-brand-vulcan: var(--brand-color-dark);
+  --color-shuttle-50: var(--brand-gray-50);
+  --color-shuttle-100: var(--brand-gray-100);
+  --color-shuttle-200: var(--brand-gray-200);
+  --color-shuttle-300: var(--brand-gray-300);
+  --color-shuttle-400: var(--brand-gray-400);
+  --color-shuttle-700: var(--brand-gray-700);
+  --color-shuttle-900: var(--brand-gray-900);
+  --color-shuttle-950: var(--brand-gray-950);
+
+  --font-brand: var(--brand-font-primary);
+  --font-brand-primary: var(--brand-font-primary);
+  --font-brand-heading: var(--brand-font-heading);
+  --font-brand-display: var(--brand-font-display);
+  --font-satoshi: var(--brand-font-primary);
+  --font-poppins: var(--brand-font-heading);
+  --font-clash: var(--brand-font-display);
+
+  --text-brand-xs: var(--brand-text-xs);
+  --text-brand-sm: var(--brand-text-sm);
+  --text-brand-base: var(--brand-text-base);
+  --text-brand-md: var(--brand-text-md);
+  --text-brand-lg: var(--brand-text-lg);
+  --text-brand-xl: var(--brand-text-xl);
+  --text-brand-2xl: var(--brand-text-2xl);
+  --text-brand-3xl: var(--brand-text-3xl);
+  --text-brand-4xl: var(--brand-text-4xl);
+  --text-brand-5xl: var(--brand-text-5xl);
+  --text-brand-hero: var(--brand-text-hero);
+
+  --spacing-brand-xs: var(--brand-spacing-xs);
+  --spacing-brand-sm: var(--brand-spacing-sm);
+  --spacing-brand-md: var(--brand-spacing-md);
+  --spacing-brand-lg: var(--brand-spacing-lg);
+  --spacing-brand-xl: var(--brand-spacing-xl);
+  --spacing-brand-2xl: var(--brand-spacing-2xl);
+  --spacing-brand-3xl: var(--brand-spacing-3xl);
+  --spacing-brand-4xl: var(--brand-spacing-4xl);
+  --spacing-brand-5xl: var(--brand-spacing-5xl);
+  --spacing-brand-section: var(--brand-spacing-section);
+
+  --radius-brand-xs: var(--brand-radius-xs);
+  --radius-brand-sm: var(--brand-radius-sm);
+  --radius-brand-md: var(--brand-radius-md);
+  --radius-brand-lg: var(--brand-radius-lg);
+  --radius-brand-pill: var(--brand-radius-pill);
+  --radius-brand-full: var(--brand-radius-full);
+
+  --shadow-brand-sm: var(--brand-shadow-sm);
+  --shadow-brand-md: var(--brand-shadow-md);
+  --shadow-brand-card: var(--brand-shadow-card);
+  --shadow-brand-hero: var(--brand-shadow-hero);
+  --shadow-brand-float: var(--brand-shadow-float);
+
+  --animate-brand-fade-in: brand-fade-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-brand-slide-up: brand-slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-brand-slide-down: brand-slide-down 0.4s
+    cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-brand-pulse-glow: brand-pulse-glow 2.5s infinite ease-in-out;
+  --animate-brand-float: brand-float 3s ease-in-out infinite;
+  --animate-brand-shimmer: brand-shimmer 2s infinite linear;
+}
