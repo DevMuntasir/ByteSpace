@@ -2,6 +2,7 @@ import { CoursesSection } from "@/components/sections/CoursesSection";
 import { FeaturedCategoriesSection } from "@/components/sections/FeaturedCategoriesSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
+import { PathSection } from "@/components/sections/PathSection";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <PartnersSection />
       <CoursesSection />
       <FeaturedCategoriesSection  />
+      <PathSection />
 
       </main>
   );

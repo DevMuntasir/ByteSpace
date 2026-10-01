@@ -36,3 +36,7 @@ export interface Course {
     thumbnail: string;
     title: string;
 }
+export interface Stat {
+    label: string;
+    value: string;
+}

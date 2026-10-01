@@ -4,6 +4,7 @@ import type {
     FooterColumn,
     NavLink,
     Partner,
+    Stat,
 } from "../types";
 
 const A = "/assets";
@@ -66,6 +67,11 @@ export const FEATURED_CATEGORIES: Category[] = [
     { icon: `${A}/network.svg`, id: "4", name: "Business" },
     { icon: `${A}/profile.svg`, id: "5", name: "Marketing" },
     { icon: `${A}/net.svg`, id: "6", name: "Photography" },
+];
+export const STATS: Stat[] = [
+    { label: "Students", value: "12K" },
+    { label: "Courses", value: "70+" },
+    { label: "Creators", value: "16" },
 ];
 export const COURSE_TABS = [
     "Featured",
