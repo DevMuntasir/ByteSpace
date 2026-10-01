@@ -14,16 +14,21 @@ export function CoursesSection() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="bg-brand-bg py-brand-section" id="courses">
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-10">
-        <SectionHeading
-          centered
-          description="At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life."
-          title="Discover Your Passion, Build Your Skills"
-        />
+    <section
+      className="bg-brand-bg py-12 sm:py-16 lg:py-brand-section"
+      id="courses"
+    >
+      <div className="mx-auto flex max-w-[1248px] flex-col gap-10 px-4 sm:px-6">
+        <div data-reveal>
+          <SectionHeading
+            centered
+            description="At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life."
+            title="Discover Your Passion, Build Your Skills"
+          />
+        </div>
 
-        <div className="flex flex-col items-center gap-4">
-          <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-col items-center gap-4" data-reveal>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
             {COURSE_TABS.map((tab, i) => (
               <button
                 className={[
@@ -39,7 +44,7 @@ export function CoursesSection() {
               </button>
             ))}
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
             {COURSE_TAGS_ROW2.map((tag) => (
               <span
                 className="rounded-brand-lg bg-brand-gray-50 px-4 py-3 font-brand-primary font-medium text-brand-base text-brand-text-secondary leading-[1.2]"
@@ -49,7 +54,7 @@ export function CoursesSection() {
               </span>
             ))}
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
             {COURSE_TAGS_ROW3.map((tag) => (
               <span
                 className="rounded-brand-lg bg-brand-gray-50 px-4 py-3 font-brand-primary font-medium text-brand-base text-brand-text-secondary leading-[1.2]"
@@ -64,7 +69,10 @@ export function CoursesSection() {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-10">
+        <div
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          data-reveal-group
+        >
           {COURSES.map((course) => (
             <CourseCard course={course} key={course.id} />
           ))}

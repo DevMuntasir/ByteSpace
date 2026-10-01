@@ -16,7 +16,7 @@ export function SignupIllustration() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none relative h-[39.1cqw] max-sm:hidden"
+      className="pointer-events-none relative h-[39.1cqw] max-lg:hidden"
     >
       <svg aria-hidden="true" className="absolute h-0 w-0 overflow-hidden">
         <defs>
@@ -34,11 +34,11 @@ export function SignupIllustration() {
           </filter>
         </defs>
       </svg>
-      <div className="absolute top-[6.25cqw] left-0 origin-top-left scale-[calc(100cqw/1440px)] [&>div]:border-0 [&>div]:shadow-none [&_div.relative.z-10]:bg-brand-dark [&_div.relative.z-10_span]:text-brand-text-white">
-        <CourseCard course={COURSES[1]} />
+      <div className="absolute top-[6.25cqw] left-0 w-[373px] origin-top-left scale-[calc(100cqw/1440px)] [&>div]:border-0 [&>div]:shadow-none [&_div.relative.z-10]:bg-brand-dark [&_div.relative.z-10_span]:text-brand-text-white">
+        <CourseCard course={COURSES[1]} decorative />
       </div>
-      <div className="absolute top-0 left-[7.8cqw] origin-top-left scale-[calc(100cqw/1440px)] [&>div]:border-0 [&>div]:shadow-none [&_div.relative.z-10]:bg-brand-dark [&_div.relative.z-10_span]:text-brand-text-white">
-        <CourseCard course={COURSES[2]} />
+      <div className="absolute top-0 left-[7.8cqw] w-[373px] origin-top-left scale-[calc(100cqw/1440px)] [&>div]:border-0 [&>div]:shadow-none [&_div.relative.z-10]:bg-brand-dark [&_div.relative.z-10_span]:text-brand-text-white">
+        <CourseCard course={COURSES[2]} decorative />
       </div>
       <Image
         alt=""

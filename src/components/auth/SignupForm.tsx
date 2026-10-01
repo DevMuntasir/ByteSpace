@@ -4,8 +4,9 @@ import Link from "next/link";
 import { type FormEvent, useState } from "react";
 
 const INPUT_CLASS =
-  "mt-[0.45cqw] h-[3.7cqw] w-full rounded-[0.95cqw] border border-brand-border-subtle bg-brand-bg px-[1.6cqw] text-[1.28cqw] text-brand-text outline-none transition-colors placeholder:text-brand-text-muted focus:border-brand-border-focus focus:ring-2 focus:ring-brand-primary/15 max-sm:mt-2 max-sm:h-12 max-sm:rounded-brand-sm max-sm:px-4 max-sm:text-brand-base";
-const LABEL_CLASS = "block text-[0.98cqw] leading-[1.5] max-sm:text-brand-sm";
+  "mt-[0.45cqw] min-h-12 h-[3.7cqw] w-full rounded-[0.95cqw] border border-brand-border-subtle bg-brand-bg px-[1.6cqw] text-base text-brand-text outline-none transition-colors placeholder:text-brand-text-muted focus:border-brand-border-focus focus:ring-2 focus:ring-brand-primary/15 max-lg:mt-2 max-lg:h-12 max-lg:rounded-brand-sm max-lg:px-4 max-lg:text-brand-base";
+const LABEL_CLASS =
+  "block text-[clamp(14px,0.98cqw,16px)] leading-[1.5] max-lg:text-brand-sm";
 
 export function SignupForm({ isLogin = false }: { isLogin?: boolean }) {
   const [message, setMessage] = useState("");
@@ -18,13 +19,13 @@ export function SignupForm({ isLogin = false }: { isLogin?: boolean }) {
   return (
     <section
       aria-labelledby="account-title"
-      className="flex min-h-[54.85cqw] flex-col rounded-[1.7cqw] bg-brand-card px-[4.4cqw] pt-[4.4cqw] pb-[3.6cqw] text-brand-text max-sm:min-h-[540px] max-sm:rounded-brand-lg max-sm:p-7"
+      className="flex min-h-[54.85cqw] flex-col rounded-[1.7cqw] bg-brand-card px-[4.4cqw] pt-[4.4cqw] pb-[3.6cqw] text-brand-text max-lg:min-h-[540px] max-lg:rounded-brand-lg max-lg:p-5 sm:max-lg:p-7"
     >
-      <p className="text-[1.28cqw] text-brand-primary leading-[1.5] max-sm:text-brand-sm">
+      <p className="text-[clamp(16px,1.28cqw,18px)] text-brand-primary leading-[1.5] max-lg:text-brand-sm">
         {isLogin ? "Sign In" : "Create an Account"}
       </p>
       <h1
-        className="mt-[0.25cqw] font-brand-heading font-semibold text-[3.06cqw] leading-[1.2] tracking-[-0.06cqw] max-sm:mt-1 max-sm:text-brand-2xl"
+        className="mt-[0.25cqw] font-brand-heading font-semibold text-[3.06cqw] leading-[1.2] tracking-[-0.06cqw] max-lg:mt-1 max-lg:text-brand-2xl"
         id="account-title"
       >
         {isLogin ? (
@@ -37,8 +38,8 @@ export function SignupForm({ isLogin = false }: { isLogin?: boolean }) {
           </>
         )}
       </h1>
-      <form className="mt-[2.95cqw] max-sm:mt-8" onSubmit={handleSubmit}>
-        <div className="space-y-[1.5cqw] max-sm:space-y-5">
+      <form className="mt-[2.95cqw] max-lg:mt-8" onSubmit={handleSubmit}>
+        <div className="space-y-[1.5cqw] max-lg:space-y-5">
           {!isLogin && (
             <label className={LABEL_CLASS} htmlFor="full-name">
               Full Name
@@ -81,9 +82,9 @@ export function SignupForm({ isLogin = false }: { isLogin?: boolean }) {
             />
           </label>
         </div>
-        <div className="mt-[1.65cqw] flex justify-end max-sm:mt-6">
+        <div className="mt-[1.65cqw] flex justify-end max-lg:mt-6">
           <button
-            className="cursor-pointer rounded-brand-full bg-brand-secondary-hover px-[1.7cqw] py-[0.8cqw] text-[1.28cqw] leading-[1.3] transition-colors hover:bg-brand-secondary focus-visible:outline-2 focus-visible:outline-brand-primary focus-visible:outline-offset-4 max-sm:min-h-11 max-sm:px-6 max-sm:py-3 max-sm:text-brand-base"
+            className="min-h-11 cursor-pointer rounded-brand-full bg-brand-secondary-hover px-[1.7cqw] py-[0.8cqw] text-[clamp(16px,1.28cqw,18px)] leading-[1.3] transition-colors hover:bg-brand-secondary focus-visible:outline-2 focus-visible:outline-brand-primary focus-visible:outline-offset-4 max-lg:min-h-11 max-lg:px-6 max-lg:py-3 max-lg:text-brand-base"
             type="submit"
           >
             {isLogin ? "Sign In" : "Continue"}
@@ -91,22 +92,22 @@ export function SignupForm({ isLogin = false }: { isLogin?: boolean }) {
         </div>
         <p
           aria-live="polite"
-          className="mt-3 text-[1.05cqw] text-brand-text-secondary empty:hidden max-sm:text-brand-xs"
+          className="mt-3 text-[clamp(14px,1.05cqw,16px)] text-brand-text-secondary empty:hidden max-lg:text-brand-xs"
         >
           {message}
         </p>
       </form>
       {isLogin && (
-        <div className="mt-[4.5cqw] max-sm:mt-8">
-          <div className="flex items-center gap-[0.85cqw] text-[1.1cqw] text-brand-text-muted max-sm:gap-3 max-sm:text-brand-sm">
+        <div className="mt-[4.5cqw] max-lg:mt-8">
+          <div className="flex items-center gap-[0.85cqw] text-[clamp(14px,1.1cqw,16px)] text-brand-text-muted max-lg:gap-3 max-lg:text-brand-sm">
             <span className="h-px flex-1 bg-brand-border" />
             <span>or</span>
             <span className="h-px flex-1 bg-brand-border" />
           </div>
-          <div className="mt-[2.9cqw] flex justify-center gap-[1.1cqw] max-sm:mt-6 max-sm:gap-3">
+          <div className="mt-[2.9cqw] flex justify-center gap-[1.1cqw] max-lg:mt-6 max-lg:gap-3">
             <button
               aria-label="Sign in with Facebook"
-              className="flex h-[5cqw] w-[5cqw] cursor-pointer items-center justify-center rounded-[1.8cqw] border border-brand-border text-brand-dark transition-colors hover:bg-brand-bg-muted focus-visible:outline-2 focus-visible:outline-brand-primary max-sm:h-12 max-sm:w-12 max-sm:rounded-brand-md"
+              className="flex h-[5cqw] w-[5cqw] cursor-pointer items-center justify-center rounded-[1.8cqw] border border-brand-border text-brand-dark transition-colors hover:bg-brand-bg-muted focus-visible:outline-2 focus-visible:outline-brand-primary max-lg:h-12 max-lg:w-12 max-lg:rounded-brand-md"
               onClick={() =>
                 setMessage("Facebook sign-in is not available yet.")
               }
@@ -114,7 +115,7 @@ export function SignupForm({ isLogin = false }: { isLogin?: boolean }) {
             >
               <svg
                 aria-hidden="true"
-                className="h-[2.6cqw] w-[2.6cqw] max-sm:h-6 max-sm:w-6"
+                className="h-[2.6cqw] w-[2.6cqw] max-lg:h-6 max-lg:w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -123,13 +124,13 @@ export function SignupForm({ isLogin = false }: { isLogin?: boolean }) {
             </button>
             <button
               aria-label="Sign in with Google"
-              className="flex h-[5cqw] w-[5cqw] cursor-pointer items-center justify-center rounded-[1.8cqw] border border-brand-border text-brand-dark transition-colors hover:bg-brand-bg-muted focus-visible:outline-2 focus-visible:outline-brand-primary max-sm:h-12 max-sm:w-12 max-sm:rounded-brand-md"
+              className="flex h-[5cqw] w-[5cqw] cursor-pointer items-center justify-center rounded-[1.8cqw] border border-brand-border text-brand-dark transition-colors hover:bg-brand-bg-muted focus-visible:outline-2 focus-visible:outline-brand-primary max-lg:h-12 max-lg:w-12 max-lg:rounded-brand-md"
               onClick={() => setMessage("Google sign-in is not available yet.")}
               type="button"
             >
               <svg
                 aria-hidden="true"
-                className="h-[2.6cqw] w-[2.6cqw] max-sm:h-6 max-sm:w-6"
+                className="h-[2.6cqw] w-[2.6cqw] max-lg:h-6 max-lg:w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -139,7 +140,7 @@ export function SignupForm({ isLogin = false }: { isLogin?: boolean }) {
           </div>
         </div>
       )}
-      <p className="mt-auto pt-[3cqw] text-center text-[1.11cqw] text-brand-text-secondary max-sm:pt-10 max-sm:text-brand-sm">
+      <p className="mt-auto pt-[3cqw] text-center text-[clamp(14px,1.11cqw,16px)] text-brand-text-secondary max-lg:pt-10 max-lg:text-brand-sm">
         {isLogin ? "New user?" : "Already have an account?"}{" "}
         <Link
           className="text-brand-primary hover:underline focus-visible:outline-2 focus-visible:outline-brand-primary focus-visible:outline-offset-2"

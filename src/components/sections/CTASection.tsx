@@ -28,7 +28,7 @@ const ORNAMENTS = [
   },
   {
     className:
-      "top-[15.2778cqw] left-[-5.5556cqw] w-[13.0556cqw] -rotate-20 [&_img]:[filter:url('#cta-white-tint')] max-[540px]:top-auto max-[540px]:bottom-[9cqw]",
+      "top-[15.2778cqw] left-[-5.5556cqw] w-[13.0556cqw] -rotate-20 [&_img]:[filter:url('#cta-white-tint')] max-lg:top-auto max-lg:bottom-[9cqw]",
     name: "cylinder-left",
     src: "hero-cylinder.webp",
   },
@@ -51,6 +51,7 @@ export function CTASection() {
     <section
       aria-labelledby="cta-heading"
       className="overflow-hidden bg-brand-primary"
+      data-motion-scene="cta"
     >
       <svg aria-hidden="true" className="absolute h-0 w-0 overflow-hidden">
         <defs>
@@ -70,13 +71,17 @@ export function CTASection() {
       </svg>
 
       <div className="mx-auto [container-type:inline-size]">
-        <div className="relative isolate h-[33.8889cqw] max-[540px]:h-auto">
+        <div className="relative isolate h-[33.8889cqw] max-lg:h-auto">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 overflow-hidden bg-[length:100%_auto] bg-[url('/assets/cta-shape.svg')] bg-repeat-y"
           >
-            {ORNAMENTS.map(({ className, name, src }) => (
-              <div className={`absolute aspect-square ${className}`} key={name}>
+            {ORNAMENTS.map(({ className, name, src }, index) => (
+              <div
+                className={`absolute aspect-square ${className}`}
+                data-parallax={[-72, 40, -48, 64, -36, 56, -64][index]}
+                key={name}
+              >
                 <Image
                   alt=""
                   className="object-contain"
@@ -89,14 +94,17 @@ export function CTASection() {
             ))}
           </div>
 
-          <div className="relative z-10 flex h-full flex-col items-center justify-center gap-[2.7778cqw] text-center max-[540px]:gap-6 max-[540px]:px-6 max-[540px]:py-20">
+          <div
+            className="relative z-10 flex h-full flex-col items-center justify-center gap-[2.7778cqw] text-center max-lg:gap-6 max-lg:px-6 max-lg:py-20"
+            data-reveal
+          >
             <h2
-              className="w-[49.3056cqw] font-brand-heading font-semibold text-[3.0556cqw] text-brand-text-light leading-[1.2] tracking-[-0.0306cqw] max-[540px]:w-full max-[540px]:max-w-[420px] max-[540px]:text-[28px] max-[540px]:tracking-[-0.28px]"
+              className="w-[49cqw] font-brand-heading font-semibold text-[3.0556cqw] text-brand-text-light leading-[1.2] tracking-[-0.0306cqw] max-lg:w-full max-lg:max-w-[420px] max-lg:text-[28px] max-lg:tracking-[-0.28px]"
               id="cta-heading"
             >
               Unlock Your Potential as a Creator with ByteSpace
             </h2>
-            <p className="w-[66.9444cqw] font-brand-primary text-[1.25cqw] text-brand-text-light leading-[1.6] max-[540px]:w-full max-[540px]:max-w-[460px] max-[540px]:text-sm">
+            <p className="w-[50cqw] font-brand-primary text-[clamp(16px,1.25cqw,18px)] text-brand-text-light leading-[1.6] max-lg:w-full max-lg:max-w-[460px] max-lg:text-base">
               Experience the collaboration of numerous creators and an expanding
               selection of courses. Register now and become a part of a
               community comprising over 10,000 local and international creators.
@@ -104,7 +112,7 @@ export function CTASection() {
               publishing your finest course on the ByteSpace Course Library.
             </p>
             <Button
-              className="focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4 max-[540px]:min-h-11 max-[540px]:px-6 max-[540px]:py-3 max-[540px]:text-sm min-[541px]:px-[1.6667cqw] min-[541px]:py-[0.8333cqw] min-[541px]:text-[1.25cqw] [&]:rounded-full [&]:bg-[#cbfc01]"
+              className="min-h-11 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4 max-lg:min-h-11 max-lg:px-6 max-lg:py-3 max-lg:text-base lg:px-[1.6667cqw] lg:py-[0.8333cqw] lg:text-[clamp(16px,1.25cqw,18px)] [&]:rounded-full [&]:bg-[#cbfc01]"
               size="md"
               type="button"
               variant="lime"
