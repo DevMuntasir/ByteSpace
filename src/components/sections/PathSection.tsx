@@ -86,7 +86,7 @@ function CoursePreview() {
 
 function LearningVisual() {
   return (
-    <div className="relative aspect-[577/552] w-full [container-type:inline-size] min-[600px]:w-[577px]">
+    <div className="relative mx-auto aspect-[577/552] w-full max-w-[577px] [container-type:inline-size]">
       <div className="absolute top-0 left-0 h-[552px] w-[577px] origin-top-left scale-[calc(100cqw/577px)]">
         <CoursePreview />
         <div className="absolute top-brand-4xl left-0 z-10 h-[492px] w-[577px] drop-shadow-[var(--brand-shadow-portrait)]">
@@ -124,7 +124,7 @@ function LearningVisual() {
 
 function CreatorVisual() {
   return (
-    <div className="relative aspect-[541/552] w-full [container-type:inline-size] min-[600px]:w-[541px]">
+    <div className="relative mx-auto aspect-[541/552] w-full max-w-[541px] [container-type:inline-size]">
       <div className="absolute top-0 left-0 h-[552px] w-[541px] origin-top-left scale-[calc(100cqw/541px)]">
         <div className="absolute top-0 left-0 w-[232px] rounded-brand-md bg-brand-primary p-brand-md text-brand-text-light">
           <p className="font-medium text-brand-sm leading-tight">
@@ -202,12 +202,12 @@ export function PathSection() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_28%_7%,var(--brand-color-secondary)_0%,transparent_25%),radial-gradient(ellipse_at_0%_88%,var(--brand-color-secondary)_0%,transparent_23%),radial-gradient(ellipse_at_0%_52%,var(--brand-color-primary)_0%,transparent_31%),radial-gradient(ellipse_at_100%_93%,var(--brand-color-primary)_0%,transparent_32%),radial-gradient(ellipse_at_100%_8%,var(--brand-color-primary)_0%,transparent_25%)] opacity-20"
       />
-      <div className="relative mx-auto max-w-[1440px] [container-type:inline-size] min-[600px]:aspect-[1440/1456]">
-        <div className="relative flex flex-col gap-brand-5xl px-brand-lg py-brand-section min-[600px]:absolute min-[600px]:top-0 min-[600px]:left-0 min-[600px]:w-[1440px] min-[600px]:origin-top-left min-[600px]:scale-[calc(100cqw/1440px)] min-[600px]:gap-[108px] min-[600px]:px-[120px] min-[600px]:py-[120px]">
-          <div className="relative grid items-center gap-brand-2xl min-[600px]:grid-cols-[574px_577px] min-[600px]:gap-[63px]">
+      <div className="relative mx-auto max-w-[1248px]">
+        <div className="relative flex flex-col gap-16 px-4 py-12 sm:px-6 sm:py-16 lg:gap-24 lg:py-24">
+          <div className="relative grid items-center gap-brand-2xl lg:grid-cols-2 lg:gap-12">
             <div className="flex flex-col gap-brand-2xl">
               <h2
-                className="font-brand-heading font-semibold text-brand-2xl leading-[1.2] tracking-[-0.01em] min-[600px]:text-brand-4xl"
+                className="font-brand-heading font-semibold text-brand-2xl leading-[1.2] tracking-[-0.01em] lg:text-brand-4xl"
                 id="path-heading"
               >
                 Your Path to Professional Growth Starts Here!
@@ -219,13 +219,13 @@ export function PathSection() {
                 expertise, or embark on a new career path entirely, we have the
                 resources you need.
               </p>
-              <dl className="flex gap-brand-3xl">
+              <dl className="flex flex-wrap gap-6 sm:gap-brand-3xl">
                 {STATS.map((stat) => (
                   <div className="flex flex-col-reverse" key={stat.label}>
                     <dt className="text-brand-md text-brand-text-secondary leading-[1.6]">
                       {stat.label}
                     </dt>
-                    <dd className="font-brand-heading font-medium text-brand-3xl text-brand-primary leading-[1.2] tracking-[-0.01em]">
+                    <dd className="font-brand-heading font-medium text-[28px] text-brand-primary leading-[1.2] tracking-[-0.01em] sm:text-brand-3xl">
                       {stat.value}
                     </dd>
                   </div>
@@ -234,12 +234,12 @@ export function PathSection() {
             </div>
             <LearningVisual />
           </div>
-          <div className="relative grid items-center gap-brand-2xl min-[600px]:grid-cols-[541px_580px] min-[600px]:gap-[79px]">
-            <div className="max-[599px]:order-2">
+          <div className="relative grid items-center gap-brand-2xl lg:grid-cols-2 lg:gap-12">
+            <div className="max-lg:order-2">
               <CreatorVisual />
             </div>
             <div className="flex flex-col gap-brand-2xl">
-              <h2 className="max-w-[480px] font-brand-heading font-semibold text-brand-2xl leading-[1.2] tracking-[-0.01em] min-[600px]:text-brand-4xl">
+              <h2 className="max-w-[480px] font-brand-heading font-semibold text-brand-2xl leading-[1.2] tracking-[-0.01em] lg:text-brand-4xl">
                 Create &amp; Manage
                 <br />
                 Courses Easily.
