@@ -11,3 +11,9 @@ export interface FooterColumn {
     links: FooterLink[];
     title: string;
 }
+export interface Partner {
+    height: number;
+    logo: string;
+    name: string;
+    width: number;
+}
