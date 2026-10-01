@@ -1,5 +1,3 @@
-const A = "/assets";
-
 interface AvatarGroupProps {
   avatars: string[];
   overflowCount: string;
@@ -36,10 +34,9 @@ export function AvatarGroup({
         </div>
       ))}
       <div
-        className="relative flex-shrink-0 overflow-hidden rounded-full"
+        className="relative z-10 flex-shrink-0 overflow-hidden rounded-full bg-[#cfff32]"
         style={{ height: size, width: size }}
       >
-        <img alt="" className="h-full w-full" src={`${A}/dbcd2.svg`} />
         <span className="absolute inset-0 flex items-center justify-center font-['Satoshi',sans-serif] font-bold text-[#242528] text-[12px] leading-[1.5]">
           {overflowCount}
         </span>
@@ -73,10 +70,9 @@ export function SmallAvatarGroup({
         </div>
       ))}
       <div
-        className="relative flex-shrink-0 overflow-hidden rounded-full"
+        className="relative z-10 flex-shrink-0 overflow-hidden rounded-full bg-[#cfff32]"
         style={{ height: 32, width: 32 }}
       >
-        <img alt="" className="h-full w-full" src={`${A}/71502.svg`} />
         <span className="absolute inset-0 flex items-center justify-center font-['Satoshi',sans-serif] font-medium text-[#242528] text-[12px] leading-[20px]">
           {overflowCount}
         </span>

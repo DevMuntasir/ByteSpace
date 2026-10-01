@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { NAV_LINKS } from "../../data";
+import styles from "./Navbar.module.css";
 
 const A = "/assets";
 
@@ -9,20 +10,18 @@ export function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <header className="absolute top-0 right-0 left-0 z-50 h-[120px] overflow-hidden">
-      <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between px-[120px]">
-        <a className="flex items-center gap-2" href="#">
+    <header className={styles.header}>
+      <div className={styles.inner}>
+        <a className={styles.brand} href="#">
           <img
             alt="ByteSpace logo"
-            className="h-[31.5px] w-[28.875px]"
+            className={styles.brandIcon}
             src={`${A}/icon.svg`}
           />
-          <span className="font-bold font-brand-display text-brand-text-light text-brand-xl leading-normal">
-            ByteSpace
-          </span>
+          <span className={styles.brandText}>ByteSpace</span>
         </a>
 
-        <nav className="flex items-center gap-6">
+        <nav aria-label="Main navigation" className={styles.links}>
           {NAV_LINKS.map((link, i) => (
             <a
               className={[
@@ -40,7 +39,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-6">
+        <div className={styles.actions}>
           <a
             className="font-brand-primary font-normal text-brand-base text-brand-text-light leading-[24px] transition-opacity hover:opacity-80"
             href="#"
@@ -57,7 +56,15 @@ export function Navbar() {
             aria-label="Cart"
             className="text-brand-text-light transition-opacity hover:opacity-80"
           >
-            <img alt="cart" className="h-6 w-6" src={`${A}/1e1d7.svg`} />
+            <svg aria-hidden="true" fill="none" viewBox="0 0 24 24">
+              <path
+                d="M5 7h14v14H5zM9 10V5a3 3 0 0 1 6 0v5"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.7"
+              />
+            </svg>
           </button>
         </div>
       </div>
