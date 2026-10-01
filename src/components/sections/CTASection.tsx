@@ -51,6 +51,7 @@ export function CTASection() {
     <section
       aria-labelledby="cta-heading"
       className="overflow-hidden bg-brand-primary"
+      data-motion-scene="cta"
     >
       <svg aria-hidden="true" className="absolute h-0 w-0 overflow-hidden">
         <defs>
@@ -75,8 +76,12 @@ export function CTASection() {
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 overflow-hidden bg-[length:100%_auto] bg-[url('/assets/cta-shape.svg')] bg-repeat-y"
           >
-            {ORNAMENTS.map(({ className, name, src }) => (
-              <div className={`absolute aspect-square ${className}`} key={name}>
+            {ORNAMENTS.map(({ className, name, src }, index) => (
+              <div
+                className={`absolute aspect-square ${className}`}
+                data-parallax={[-72, 40, -48, 64, -36, 56, -64][index]}
+                key={name}
+              >
                 <Image
                   alt=""
                   className="object-contain"
@@ -89,7 +94,10 @@ export function CTASection() {
             ))}
           </div>
 
-          <div className="relative z-10 flex h-full flex-col items-center justify-center gap-[2.7778cqw] text-center max-lg:gap-6 max-lg:px-6 max-lg:py-20">
+          <div
+            className="relative z-10 flex h-full flex-col items-center justify-center gap-[2.7778cqw] text-center max-lg:gap-6 max-lg:px-6 max-lg:py-20"
+            data-reveal
+          >
             <h2
               className="w-[49cqw] font-brand-heading font-semibold text-[3.0556cqw] text-brand-text-light leading-[1.2] tracking-[-0.0306cqw] max-lg:w-full max-lg:max-w-[420px] max-lg:text-[28px] max-lg:tracking-[-0.28px]"
               id="cta-heading"

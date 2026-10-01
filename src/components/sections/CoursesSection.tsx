@@ -19,13 +19,15 @@ export function CoursesSection() {
       id="courses"
     >
       <div className="mx-auto flex max-w-[1248px] flex-col gap-10 px-4 sm:px-6">
-        <SectionHeading
-          centered
-          description="At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life."
-          title="Discover Your Passion, Build Your Skills"
-        />
+        <div data-reveal>
+          <SectionHeading
+            centered
+            description="At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life."
+            title="Discover Your Passion, Build Your Skills"
+          />
+        </div>
 
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4" data-reveal>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
             {COURSE_TABS.map((tab, i) => (
               <button
@@ -67,7 +69,10 @@ export function CoursesSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          data-reveal-group
+        >
           {COURSES.map((course) => (
             <CourseCard course={course} key={course.id} />
           ))}
