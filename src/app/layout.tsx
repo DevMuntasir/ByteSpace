@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import "lenis/dist/lenis.css";
 import "./globals.css";
+import SmoothScroll from "./smooth-scroll";
 
 export const metadata: Metadata = {
   description:
@@ -15,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-[#242528] antialiased">
+        <SmoothScroll />
         {children}
       </body>
     </html>
