@@ -1,12 +1,18 @@
 import type {
     Category,
+    Course,
     FooterColumn,
     NavLink,
     Partner,
 } from "../types";
 
 const A = "/assets";
-
+const SHARED_AVATARS = [
+    `${A}/a-1.png`,
+    `${A}/a-2.png`,
+    `${A}/a-3.png`,
+    `${A}/a-4.png`,
+];
 export const NAV_LINKS: NavLink[] = [
     { active: true, href: "#", label: "Home" },
     { href: "/courses", label: "Courses" },
@@ -60,4 +66,117 @@ export const FEATURED_CATEGORIES: Category[] = [
     { icon: `${A}/cat-4.svg`, id: "4", name: "Business" },
     { icon: `${A}/cat-5.svg`, id: "5", name: "Marketing" },
     { icon: `${A}/cat-6.svg`, id: "6", name: "Photography" },
+];
+export const COURSE_TABS = [
+    "Featured",
+    "Music",
+    "Drawing & Painting",
+    "Marketing",
+    "Animation",
+    "Social Media",
+    "UI/UX Design",
+    "Creative Marketing",
+];
+
+export const COURSE_TAGS_ROW2 = [
+    "Digital Illustration",
+    "Film & Video",
+    "Crafts",
+    "Freelance & Entrepreneurship",
+    "Graphic Design",
+    "Photography",
+];
+
+export const COURSE_TAGS_ROW3 = [
+    "Productivity",
+    "Web Development",
+    "Data Science",
+    "Cooking",
+];
+
+export const COURSES: Course[] = [
+    {
+        author: "purepearl studio",
+        comments: 59,
+        duration: "2 hours 16 mins",
+        enrolledAvatars: SHARED_AVATARS,
+        enrolledCount: "26+",
+        id: "1",
+        lessons: 17,
+        level: "Beginner",
+        price: 25,
+        rating: 4.5,
+        thumbnail: `${A}/course-1.png`,
+        title: "Learn Figma from Basic",
+    },
+    {
+        author: "purepearl studio",
+        comments: 59,
+        duration: "2 hours 16 mins",
+        enrolledAvatars: SHARED_AVATARS,
+        enrolledCount: "26+",
+        id: "2",
+        lessons: 17,
+        level: "Beginner",
+        price: 25,
+        rating: 4.5,
+        thumbnail: `${A}/course-2.png`,
+        title: "Build Digital Asset",
+    },
+    {
+        author: "purepearl studio",
+        comments: 59,
+        duration: "2 hours 16 mins",
+        enrolledAvatars: SHARED_AVATARS,
+        enrolledCount: "26+",
+        id: "3",
+        lessons: 17,
+        level: "Beginner",
+        price: 25,
+        rating: 4.5,
+        thumbnail: `${A}/course-3.png`,
+        title: "the Power of Big Data",
+    },
+    {
+        author: "purepearl studio",
+        comments: 59,
+        duration: "2 hours 16 mins",
+        enrolledAvatars: SHARED_AVATARS,
+        enrolledCount: "26+",
+        id: "4",
+        lessons: 17,
+        level: "Beginner",
+        price: 25,
+        rating: 4.5,
+        thumbnail: `${A}/course-4.png`,
+        title: "Balancing Productivity and Self-Care",
+    },
+    {
+        author: "purepearl studio",
+        comments: 59,
+        duration: "2 hours 16 mins",
+        enrolledAvatars: SHARED_AVATARS,
+        enrolledCount: "26+",
+        id: "5",
+        lessons: 17,
+        level: "Beginner",
+        price: 25,
+        rating: 4.5,
+        thumbnail: `${A}/course-5.png`,
+        title: "Mastering Money Management",
+    },
+    {
+        author: "purepearl studio",
+        comments: 59,
+        duration: "2 hours 16 mins",
+        enrolledAvatars: SHARED_AVATARS,
+        enrolledCount: "26+",
+        id: "6",
+        lessons: 17,
+        level: "Beginner",
+        price: 25,
+        rating: 4.5,
+        thumbnail: `${A}/course-6.png`,
+        title: "From Idea to Startup Success",
+    },
 ];

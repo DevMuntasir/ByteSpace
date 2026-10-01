@@ -22,3 +22,17 @@ export interface Category {
     id: string;
     name: string;
 }
+export interface Course {
+    author: string;
+    comments: number;
+    duration: string;
+    enrolledAvatars: string[];
+    enrolledCount: string;
+    id: string;
+    lessons: number;
+    level: "Beginner" | "Intermediate" | "Advanced";
+    price: number;
+    rating: number;
+    thumbnail: string;
+    title: string;
+}
