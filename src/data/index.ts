@@ -16,7 +16,7 @@ const SHARED_AVATARS = [
   `${A}/a-4.png`,
 ];
 export const NAV_LINKS: NavLink[] = [
-  { active: true, href: "#", label: "Home" },
+  { active: true, href: "/", label: "Home" },
   { href: "/courses", label: "Courses" },
   { href: "/creators", label: "Creators" },
 ];
@@ -115,7 +115,7 @@ export const COURSES: Course[] = [
     level: "Beginner",
     price: 25,
     rating: 4.5,
-    thumbnail: `${A}/course-1.png`,
+    thumbnail: `${A}/course-5.png`,
     title: "Learn Figma from Basic",
   },
   {
@@ -129,7 +129,7 @@ export const COURSES: Course[] = [
     level: "Beginner",
     price: 25,
     rating: 4.5,
-    thumbnail: `${A}/course-2.png`,
+    thumbnail: `${A}/course-1.png`,
     title: "Build Digital Asset",
   },
   {
@@ -143,7 +143,7 @@ export const COURSES: Course[] = [
     level: "Beginner",
     price: 25,
     rating: 4.5,
-    thumbnail: `${A}/course-3.png`,
+    thumbnail: `${A}/course-2.png`,
     title: "the Power of Big Data",
   },
   {
@@ -157,7 +157,7 @@ export const COURSES: Course[] = [
     level: "Beginner",
     price: 25,
     rating: 4.5,
-    thumbnail: `${A}/course-4.png`,
+    thumbnail: `${A}/course-3.png`,
     title: "Balancing Productivity and Self-Care",
   },
   {
@@ -171,7 +171,7 @@ export const COURSES: Course[] = [
     level: "Beginner",
     price: 25,
     rating: 4.5,
-    thumbnail: `${A}/course-5.png`,
+    thumbnail: `${A}/course-4.png`,
     title: "Mastering Money Management",
   },
   {

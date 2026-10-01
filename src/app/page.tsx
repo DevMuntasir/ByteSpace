@@ -1,3 +1,4 @@
+import { LandingMotion } from "@/components/landing-motion";
 import { Footer } from "@/components/layout/Footer";
 import { CoursesSection } from "@/components/sections/CoursesSection";
 import { CTASection } from "@/components/sections/CTASection";
@@ -9,7 +10,7 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <LandingMotion>
       <HeroSection />
       <PartnersSection />
       <CoursesSection />
@@ -18,6 +19,6 @@ export default function HomePage() {
       <CTASection />
       <TestimonialsSection />
       <Footer />
-    </main>
+    </LandingMotion>
   );
 }

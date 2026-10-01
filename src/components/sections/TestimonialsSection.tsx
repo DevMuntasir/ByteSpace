@@ -3,7 +3,7 @@ import { TestimonialCard } from "../ui/TestimonialCard";
 
 export function TestimonialsSection() {
   return (
-    <section className="relative overflow-hidden bg-[#fafafa] py-[74px]">
+    <section className="relative overflow-hidden bg-[#fafafa] py-12 sm:py-[74px]">
       {/* Background decorative ellipses */}
       <div className="pointer-events-none absolute top-[-241px] right-[-200px] h-[1137px] w-[1137px] opacity-40">
         <div className="h-full w-full rounded-full bg-[radial-gradient(circle,rgba(0,59,226,0.16)_0%,transparent_70%)]" />
@@ -12,13 +12,16 @@ export function TestimonialsSection() {
         <div className="h-full w-full rounded-full bg-[radial-gradient(circle,rgba(116,94,246,0.16)_0%,transparent_70%)]" />
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col gap-[72px] px-[118px]">
+      <div className="relative z-10 mx-auto flex max-w-[1248px] flex-col gap-10 px-4 sm:px-6 lg:gap-[72px]">
         {/* Heading row */}
-        <div className="flex items-end gap-[43px]">
-          <h2 className="w-[577px] font-['Poppins',sans-serif] font-semibold text-[44px] text-black leading-[1.2] tracking-[-0.44px]">
+        <div
+          className="grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-10"
+          data-reveal
+        >
+          <h2 className="min-w-0 font-['Poppins',sans-serif] font-semibold text-[28px] text-black leading-[1.2] tracking-[-0.44px] sm:text-4xl lg:text-[44px]">
             Discover What Our Community Is Saying
           </h2>
-          <p className="w-[580px] font-['Satoshi',sans-serif] text-[#4f4f4f] text-[18px] leading-[1.6]">
+          <p className="min-w-0 font-['Satoshi',sans-serif] text-[#4f4f4f] text-[18px] leading-[1.6]">
             At ByteSpace, our vibrant community of learners and creators is at
             the heart of what we do. Hear directly from those who have
             experienced the transformative journey of learning and creating on
@@ -28,7 +31,10 @@ export function TestimonialsSection() {
         </div>
 
         {/* Cards */}
-        <div className="flex gap-[41px]">
+        <div
+          className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+          data-reveal-group
+        >
           {TESTIMONIALS.map((t) => (
             <TestimonialCard key={t.id} testimonial={t} />
           ))}

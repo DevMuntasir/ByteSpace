@@ -6,10 +6,10 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-brand-bg">
       <div className="h-px w-full bg-brand-border" />
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-[130px] px-0 py-[71px]">
-        <div className="flex items-start gap-[92px]">
-          <div className="flex flex-col gap-[45px]">
-            <div className="flex flex-col gap-4">
+      <div className="mx-auto flex max-w-[1248px] flex-col gap-12 px-4 py-12 sm:px-6 lg:gap-24 lg:py-[71px]">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="flex min-w-0 flex-col gap-8">
+            <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
                 <img
                   alt=""
@@ -20,15 +20,16 @@ export function Footer() {
                   ByteSpace
                 </span>
               </div>
-              <p className="w-[528px] font-brand-primary text-brand-sm text-brand-text leading-[1.6]">
+              <p className="max-w-[528px] font-brand-primary text-brand-sm text-brand-text leading-[1.6]">
                 Stay Up to date with our latest features and releases by joining
                 our newsletter.
               </p>
             </div>
             <div className="flex flex-col gap-6">
-              <div className="flex items-center gap-6">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <input
-                  className="h-[52px] w-[376px] rounded-brand-pill border border-brand-border bg-brand-bg px-6 font-brand-primary text-brand-base text-brand-text leading-[1.6] outline-none transition-colors focus:border-brand-primary"
+                  aria-label="Email address for newsletter"
+                  className="h-[52px] w-full min-w-0 rounded-brand-pill border border-brand-border bg-brand-bg px-6 font-brand-primary text-brand-base text-brand-text leading-[1.6] outline-none transition-colors focus:border-brand-primary sm:flex-1"
                   placeholder="Enter your email"
                   type="email"
                 />
@@ -36,25 +37,25 @@ export function Footer() {
                   Subscribe
                 </button>
               </div>
-              <p className="w-[504px] font-brand-primary text-brand-text text-brand-xs leading-[1.6]">
+              <p className="max-w-[504px] font-brand-primary text-brand-text text-brand-xs leading-[1.6]">
                 By subscribing, you agree to our Privacy Policy and consent to
                 receive updates from our company.
               </p>
             </div>
           </div>
 
-          <div className="flex w-[580px] items-end gap-10">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             {FOOTER_COLUMNS.map((col, i) => (
-              <div className="flex w-[167px] flex-col gap-6" key={i}>
+              <div className="flex min-w-0 flex-col gap-6" key={i}>
                 {col.title && (
                   <p className="font-brand-primary font-semibold text-brand-base text-brand-text leading-6">
                     {col.title}
                   </p>
                 )}
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-2">
                   {col.links.map((link) => (
                     <a
-                      className="font-brand-primary text-brand-sm text-brand-text leading-[1.6] transition-colors hover:text-brand-primary"
+                      className="inline-flex min-h-11 items-center font-brand-primary text-brand-sm text-brand-text leading-[1.6] transition-colors hover:text-brand-primary"
                       href={link.href}
                       key={link.label}
                     >
@@ -69,15 +70,15 @@ export function Footer() {
 
         <div className="flex w-full flex-col gap-4">
           <div className="h-px w-full bg-brand-border" />
-          <div className="flex w-full items-center justify-between">
-            <p className="w-[460px] font-brand-primary text-brand-text text-brand-xs leading-[1.6]">
+          <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="font-brand-primary text-brand-text text-brand-xs leading-[1.6]">
               @ 2023 ByteSpace. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               {["Privacy Policy", "Terms of Service", "Cookies Settings"].map(
                 (item) => (
                   <a
-                    className="whitespace-nowrap font-brand-primary text-brand-text text-brand-xs leading-[1.6] transition-colors hover:text-brand-primary"
+                    className="inline-flex min-h-11 items-center whitespace-nowrap font-brand-primary text-brand-text text-brand-xs leading-[1.6] transition-colors hover:text-brand-primary"
                     href="#"
                     key={item}
                   >
