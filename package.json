@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "next build",
+    "build": "node scripts/check-public-assets.mjs && next build",
     "dev": "next dev",
     "format": "ultracite fix",
     "lint": "ultracite check",

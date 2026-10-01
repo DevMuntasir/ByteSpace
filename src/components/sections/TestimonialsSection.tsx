@@ -1,17 +1,15 @@
 import { TESTIMONIALS } from "../../data";
 import { TestimonialCard } from "../ui/TestimonialCard";
 
-const A = "/assets";
-
 export function TestimonialsSection() {
   return (
     <section className="relative overflow-hidden bg-[#fafafa] py-[74px]">
       {/* Background decorative ellipses */}
       <div className="pointer-events-none absolute top-[-241px] right-[-200px] h-[1137px] w-[1137px] opacity-40">
-        <img alt="" className="h-full w-full" src={`${A}/29172.svg`} />
+        <div className="h-full w-full rounded-full bg-[radial-gradient(circle,rgba(0,59,226,0.16)_0%,transparent_70%)]" />
       </div>
       <div className="pointer-events-none absolute top-[149px] left-[-442px] h-[1137px] w-[1137px] opacity-30">
-        <img alt="" className="h-full w-full" src={`${A}/60d3b.svg`} />
+        <div className="h-full w-full rounded-full bg-[radial-gradient(circle,rgba(116,94,246,0.16)_0%,transparent_70%)]" />
       </div>
 
       <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col gap-[72px] px-[118px]">

@@ -109,3 +109,6 @@
 *.stl                filter=lfs diff=lfs merge=lfs -text
 *.nc                 filter=lfs diff=lfs merge=lfs -text
 *.mat                filter=lfs diff=lfs merge=lfs -text
+
+# Ship public assets directly with deployments instead of Git LFS pointers.
+public/** -filter -diff -merge -text
