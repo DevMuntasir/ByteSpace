@@ -1,4 +1,5 @@
 import { CoursesSection } from "@/components/sections/CoursesSection";
+import { CTASection } from "@/components/sections/CTASection";
 import { FeaturedCategoriesSection } from "@/components/sections/FeaturedCategoriesSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
@@ -10,9 +11,9 @@ export default function HomePage() {
       <HeroSection />
       <PartnersSection />
       <CoursesSection />
-      <FeaturedCategoriesSection  />
+      <FeaturedCategoriesSection />
       <PathSection />
-
-      </main>
+      <CTASection />
+    </main>
   );
 }
