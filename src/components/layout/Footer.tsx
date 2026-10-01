@@ -14,7 +14,7 @@ export function Footer() {
                 <img
                   alt=""
                   className="h-[31.5px] w-[28.875px]"
-                  src={`${A}/35630.svg`}
+                  src={`${A}/icon.svg`}
                 />
                 <span className="font-bold font-brand-display text-brand-text text-brand-xl leading-normal">
                   ByteSpace

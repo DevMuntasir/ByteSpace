@@ -1,0 +1,18 @@
+<svg
+  fill="none"
+  height="72"
+  overflow="visible"
+  preserveAspectRatio="none"
+  style="display: block;"
+  viewBox="0 0 72 72"
+  width="72"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g id="Style=Filled">
+    <path
+      d="M60 54C63.3 54 65.97 51.3 65.97 48L66 18C66 14.7 63.3 12 60 12H12C8.7 12 6 14.7 6 18V48C6 51.3 8.7 54 12 54H0V60H72V54H60ZM12 18H60V48H12V18Z"
+      fill="#ABAEB5"
+      id="Vector"
+    />
+  </g>
+</svg>
