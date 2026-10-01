@@ -1,3 +1,4 @@
+import { Footer } from "@/components/layout/Footer";
 import { CoursesSection } from "@/components/sections/CoursesSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { FeaturedCategoriesSection } from "@/components/sections/FeaturedCategoriesSection";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <FeaturedCategoriesSection />
       <PathSection />
       <CTASection />
+      <Footer />
     </main>
   );
 }

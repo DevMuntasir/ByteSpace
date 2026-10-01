@@ -4,7 +4,7 @@ import { Button } from "../ui/Button";
 const ORNAMENTS = [
   {
     className:
-      "top-[-10.9028cqw] left-[-10.2778cqw] w-[26.7361cqw] [&_img]:[filter:url('#cta-lime-tint')]",
+      "top-[-10.9028cqw] left-[-8.3333cqw] w-[26.7361cqw] [&_img]:[filter:url('#cta-lime-tint')]",
     name: "spiral-left",
     src: "hero-spiral-left.webp",
   },
@@ -28,9 +28,9 @@ const ORNAMENTS = [
   },
   {
     className:
-      "top-[16.3194cqw] left-[-3.9583cqw] w-[13.0556cqw] -rotate-35 [&_img]:[filter:url('#cta-white-tint')] max-[540px]:top-auto max-[540px]:bottom-[9cqw]",
-    name: "pyramid-left",
-    src: "hero-pyramid.webp",
+      "top-[15.2778cqw] left-[-5.5556cqw] w-[13.0556cqw] -rotate-20 [&_img]:[filter:url('#cta-white-tint')] max-[540px]:top-auto max-[540px]:bottom-[9cqw]",
+    name: "cylinder-left",
+    src: "hero-cylinder.webp",
   },
   {
     className:
@@ -73,16 +73,8 @@ export function CTASection() {
         <div className="relative isolate h-[33.8889cqw] max-[540px]:h-auto">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 overflow-hidden"
+            className="pointer-events-none absolute inset-0 overflow-hidden bg-[length:100%_auto] bg-[url('/assets/cta-shape.svg')] bg-repeat-y"
           >
-            <Image
-              alt=""
-              className="absolute top-0 left-0 h-auto w-full max-w-none"
-              height={1026}
-              sizes="(max-width: 1440px) 100vw, 1440px"
-              src="/assets/cta-shape.svg"
-              width={1442}
-            />
             {ORNAMENTS.map(({ className, name, src }) => (
               <div className={`absolute aspect-square ${className}`} key={name}>
                 <Image
