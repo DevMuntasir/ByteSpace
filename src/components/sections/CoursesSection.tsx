@@ -7,9 +7,8 @@ import {
   COURSE_TAGS_ROW3,
   COURSES,
 } from "../../data";
-
-import { SectionHeading } from "../ui/SectionHeading";
 import { CourseCard } from "../ui/CourseCard";
+import { SectionHeading } from "../ui/SectionHeading";
 
 export function CoursesSection() {
   const [activeTab, setActiveTab] = useState(0);
