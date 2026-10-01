@@ -14,7 +14,10 @@ export function TestimonialsSection() {
 
       <div className="relative z-10 mx-auto flex max-w-[1248px] flex-col gap-10 px-4 sm:px-6 lg:gap-[72px]">
         {/* Heading row */}
-        <div className="grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-10">
+        <div
+          className="grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-10"
+          data-reveal
+        >
           <h2 className="min-w-0 font-['Poppins',sans-serif] font-semibold text-[28px] text-black leading-[1.2] tracking-[-0.44px] sm:text-4xl lg:text-[44px]">
             Discover What Our Community Is Saying
           </h2>
@@ -28,7 +31,10 @@ export function TestimonialsSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div
+          className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+          data-reveal-group
+        >
           {TESTIMONIALS.map((t) => (
             <TestimonialCard key={t.id} testimonial={t} />
           ))}

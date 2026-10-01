@@ -6,6 +6,9 @@ import { Badge } from "./Badge";
 
 const A = "/assets";
 
+const truncateTitle = (title: string, maxLength = 26) =>
+  title.length > maxLength ? `${title.slice(0, maxLength)}…` : title;
+
 interface CourseCardProps {
   course: Course;
   decorative?: boolean;
@@ -53,7 +56,7 @@ export function CourseCard({
             className={`font-brand-heading font-semibold text-brand-dark text-brand-lg leading-[1.2] tracking-[-0.2px] group-hover:text-brand-primary ${variant === "catalog" ? "truncate" : ""}`}
             title={course.title}
           >
-            {course.title}
+            {truncateTitle(course.title)}
           </p>
           <p className="font-brand-primary text-brand-text-secondary text-brand-xs leading-[1.6]">
             by{" "}

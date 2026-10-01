@@ -43,7 +43,10 @@ function StudentAvatars({ compact = false }: { compact?: boolean }) {
 
 function CoursePreview() {
   return (
-    <div className="absolute top-0 left-0 w-[373px] overflow-hidden rounded-brand-lg border border-brand-border-subtle bg-brand-card p-brand-md">
+    <div
+      className="absolute top-0 left-0 w-[373px] overflow-hidden rounded-brand-lg border border-brand-border-subtle bg-brand-card p-brand-md"
+      data-parallax="22"
+    >
       <div className="relative h-[195px] overflow-hidden rounded-brand-md">
         <Image
           alt="Designer learning Figma at a desk"
@@ -86,7 +89,10 @@ function CoursePreview() {
 
 function LearningVisual() {
   return (
-    <div className="relative mx-auto aspect-[577/552] w-full max-w-[577px] [container-type:inline-size]">
+    <div
+      className="relative mx-auto aspect-[577/552] w-full max-w-[577px] [container-type:inline-size]"
+      data-motion-scene="visual"
+    >
       <div className="absolute top-0 left-0 h-[552px] w-[577px] origin-top-left scale-[calc(100cqw/577px)]">
         <CoursePreview />
         <div className="absolute top-brand-4xl left-0 z-10 h-[492px] w-[577px] drop-shadow-[var(--brand-shadow-portrait)]">
@@ -101,7 +107,10 @@ function LearningVisual() {
             />
           </div>
         </div>
-        <div className="absolute top-[213px] right-0 z-20 flex w-[232px] flex-col gap-brand-sm rounded-brand-md bg-brand-card/95 p-brand-md">
+        <div
+          className="absolute top-[213px] right-0 z-20 flex w-[232px] flex-col gap-brand-sm rounded-brand-md bg-brand-card/95 p-brand-md"
+          data-parallax="-44"
+        >
           <p className="font-medium text-brand-sm leading-6">
             Learning Progress
           </p>
@@ -113,6 +122,7 @@ function LearningVisual() {
         <Image
           alt=""
           className="pointer-events-none absolute top-brand-4xl right-[-40px] z-30"
+          data-parallax="-56"
           height={215}
           src="/assets/spiral.svg"
           width={215}
@@ -124,9 +134,15 @@ function LearningVisual() {
 
 function CreatorVisual() {
   return (
-    <div className="relative mx-auto aspect-[541/552] w-full max-w-[541px] [container-type:inline-size]">
+    <div
+      className="relative mx-auto aspect-[541/552] w-full max-w-[541px] [container-type:inline-size]"
+      data-motion-scene="visual"
+    >
       <div className="absolute top-0 left-0 h-[552px] w-[541px] origin-top-left scale-[calc(100cqw/541px)]">
-        <div className="absolute top-0 left-0 w-[232px] rounded-brand-md bg-brand-primary p-brand-md text-brand-text-light">
+        <div
+          className="absolute top-0 left-0 w-[232px] rounded-brand-md bg-brand-primary p-brand-md text-brand-text-light"
+          data-parallax="28"
+        >
           <p className="font-medium text-brand-sm leading-tight">
             Total Revenue
           </p>
@@ -136,7 +152,10 @@ function CreatorVisual() {
           </p>
           <ProgressBar trackColor="var(--brand-color-bg-white)" value={55} />
         </div>
-        <div className="absolute top-[150px] left-0 flex w-[134px] flex-col gap-brand-sm rounded-brand-md bg-brand-primary p-brand-md text-brand-text-light">
+        <div
+          className="absolute top-[150px] left-0 flex w-[134px] flex-col gap-brand-sm rounded-brand-md bg-brand-primary p-brand-md text-brand-text-light"
+          data-parallax="16"
+        >
           <div>
             <p className="font-medium text-brand-sm leading-tight">
               Year to Date
@@ -162,7 +181,10 @@ function CreatorVisual() {
             />
           </div>
         </div>
-        <div className="absolute right-0 bottom-brand-4xl z-20 flex w-[258px] flex-col gap-brand-sm rounded-brand-md bg-brand-card/95 p-brand-md">
+        <div
+          className="absolute right-0 bottom-brand-4xl z-20 flex w-[258px] flex-col gap-brand-sm rounded-brand-md bg-brand-card/95 p-brand-md"
+          data-parallax="-40"
+        >
           <div>
             <p className="font-medium text-brand-base leading-6">
               Happy Students
@@ -183,6 +205,7 @@ function CreatorVisual() {
         <Image
           alt=""
           className="pointer-events-none absolute top-brand-5xl right-brand-xl z-20 -rotate-45"
+          data-parallax="-56"
           height={215}
           src="/assets/spiral.svg"
           width={215}
@@ -205,7 +228,7 @@ export function PathSection() {
       <div className="relative mx-auto max-w-[1248px]">
         <div className="relative flex flex-col gap-16 px-4 py-12 sm:px-6 sm:py-16 lg:gap-24 lg:py-24">
           <div className="relative grid items-center gap-brand-2xl lg:grid-cols-2 lg:gap-12">
-            <div className="flex flex-col gap-brand-2xl">
+            <div className="flex flex-col gap-brand-2xl" data-reveal>
               <h2
                 className="font-brand-heading font-semibold text-brand-2xl leading-[1.2] tracking-[-0.01em] lg:text-brand-4xl"
                 id="path-heading"
@@ -238,7 +261,7 @@ export function PathSection() {
             <div className="max-lg:order-2">
               <CreatorVisual />
             </div>
-            <div className="flex flex-col gap-brand-2xl">
+            <div className="flex flex-col gap-brand-2xl" data-reveal>
               <h2 className="max-w-[480px] font-brand-heading font-semibold text-brand-2xl leading-[1.2] tracking-[-0.01em] lg:text-brand-4xl">
                 Create &amp; Manage
                 <br />

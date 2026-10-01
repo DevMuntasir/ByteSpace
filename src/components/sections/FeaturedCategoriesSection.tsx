@@ -6,7 +6,7 @@ export function FeaturedCategoriesSection() {
     <section className="bg-brand-bg py-12 sm:py-16 lg:py-brand-section">
       <div className="mx-auto flex max-w-[1248px] flex-col gap-10 px-4 sm:px-6">
         {/* Heading row */}
-        <div className="flex items-end justify-between">
+        <div className="flex items-end justify-between" data-reveal>
           <div className="flex w-full flex-col items-center gap-4">
             <h2 className="text-center font-brand-heading font-medium text-[28px] text-brand-dark leading-[1.2] tracking-[-0.44px] sm:text-brand-3xl lg:text-brand-4xl">
               Explore Diverse Learning Paths at Bytespace
@@ -27,7 +27,10 @@ export function FeaturedCategoriesSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-6 xl:grid-cols-6">
+        <div
+          className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-6 xl:grid-cols-6"
+          data-reveal-group
+        >
           {FEATURED_CATEGORIES.map((cat) => (
             <CategoryCard category={cat} key={cat.id} variant="explore" />
           ))}

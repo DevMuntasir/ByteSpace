@@ -62,6 +62,7 @@ export function HeroSection() {
     <section
       aria-labelledby="hero-heading"
       className="overflow-hidden bg-[#123de3] text-white"
+      data-motion-scene="hero"
     >
       <svg aria-hidden="true" className="absolute h-0 w-0 overflow-hidden">
         <defs>
@@ -145,12 +146,14 @@ export function HeroSection() {
             <div
               aria-hidden="true"
               className="absolute top-[40.4167cqw] left-1/2 aspect-square w-[79.7917cqw] -translate-x-1/2 rounded-full bg-[#cfff32] max-lg:top-[12cqw] max-lg:w-[116cqw]"
+              data-parallax="48"
             />
 
-            {ORNAMENTS.map(({ className, name, src }) => (
+            {ORNAMENTS.map(({ className, name, src }, index) => (
               <div
                 aria-hidden="true"
                 className={`absolute aspect-square [&_img]:object-contain ${className}`}
+                data-parallax={[-100, -48, -80, -120, -60, -90][index]}
                 key={name}
               >
                 <Image
@@ -164,7 +167,10 @@ export function HeroSection() {
               </div>
             ))}
 
-            <div className="absolute top-[35.5556cqw] left-1/2 h-[37.5694cqw] w-[40.1389cqw] -translate-x-1/2 max-lg:top-[6cqw] max-lg:h-[80cqw] max-lg:w-[85cqw] [&_img]:object-contain [&_img]:drop-shadow-[2.6cqw_3.6cqw_2.5cqw_#00000026]">
+            <div
+              className="absolute top-[35.5556cqw] left-1/2 h-[37.5694cqw] w-[40.1389cqw] -translate-x-1/2 max-lg:top-[6cqw] max-lg:h-[80cqw] max-lg:w-[85cqw] [&_img]:object-contain [&_img]:drop-shadow-[2.6cqw_3.6cqw_2.5cqw_#00000026]"
+              data-parallax="24"
+            >
               <Image
                 alt="Smiling student wearing headphones and holding a laptop"
                 fill
@@ -176,6 +182,7 @@ export function HeroSection() {
 
             <div
               className={`${CARD_CLASS} top-[45.2083cqw] left-[58.4722cqw] flex w-[16.1111cqw] flex-col gap-[0.5556cqw] text-[0.9722cqw] max-lg:top-[29cqw] max-lg:right-[4cqw] max-lg:left-auto max-lg:w-[29cqw] max-lg:max-w-[180px] max-lg:gap-1.5 max-lg:text-[clamp(9px,2cqw,12px)]`}
+              data-parallax="-52"
             >
               <p>Learning Progress</p>
               <strong className="font-brand-heading font-semibold text-[3.3333cqw] tracking-[-0.0333cqw] max-lg:text-[clamp(26px,6cqw,40px)]">
@@ -190,6 +197,7 @@ export function HeroSection() {
 
             <div
               className={`${CARD_CLASS} top-[44.375cqw] left-[28.0556cqw] max-lg:top-[25cqw] max-lg:left-[4cqw]`}
+              data-parallax="-34"
             >
               <p>UI/UX Design</p>
               <div className="mt-[0.2778cqw] flex gap-[0.5556cqw] text-[#82868e] text-[0.8333cqw] leading-[1.6] max-lg:mt-[3px] max-lg:gap-1 max-lg:text-[clamp(7px,1.7cqw,10px)]">
@@ -201,6 +209,7 @@ export function HeroSection() {
 
             <div
               className={`${CARD_CLASS} top-[58.125cqw] left-[22.7778cqw] w-[17.9167cqw] max-lg:top-[63cqw] max-lg:left-[8cqw] max-lg:w-[166px]`}
+              data-parallax="-68"
             >
               <p>Happy Students</p>
               <div className="flex items-center text-[0.8333cqw] leading-[1.6] max-lg:text-[9px]">

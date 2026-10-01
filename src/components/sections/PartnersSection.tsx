@@ -7,6 +7,7 @@ export function PartnersSection() {
         {PARTNERS.map((partner) => (
           <div
             className="relative max-w-full shrink-0"
+            data-reveal
             key={partner.name}
             style={{ height: partner.height, width: partner.width }}
           >
