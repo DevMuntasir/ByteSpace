@@ -46,13 +46,13 @@ export function Navbar() {
         <div className="flex items-center gap-[1.6667cqw] max-md:gap-3 max-[359px]:gap-2">
           <a
             className={`${NAV_ITEM_CLASS} font-normal leading-6 hover:opacity-80`}
-            href="#"
+            href="/signin"
           >
             Sign In
           </a>
           <a
             className={`${NAV_ITEM_CLASS} font-normal leading-6 hover:opacity-80`}
-            href="#"
+            href="/signup"
           >
             Join Us
           </a>
