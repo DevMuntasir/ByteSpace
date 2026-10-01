@@ -60,12 +60,12 @@ export const PARTNERS: Partner[] = [
 ];
 
 export const FEATURED_CATEGORIES: Category[] = [
-    { icon: `${A}/cat-1.svg`, id: "1", name: "Design" },
-    { icon: `${A}/cat-2.svg`, id: "2", name: "Development" },
-    { icon: `${A}/cat-3.svg`, id: "3", name: "IT & Software" },
-    { icon: `${A}/cat-4.svg`, id: "4", name: "Business" },
-    { icon: `${A}/cat-5.svg`, id: "5", name: "Marketing" },
-    { icon: `${A}/cat-6.svg`, id: "6", name: "Photography" },
+    { icon: `${A}/design.svg`, id: "1", name: "Design" },
+    { icon: `${A}/code.svg`, id: "2", name: "Development" },
+    { icon: `${A}/laptop.svg`, id: "3", name: "IT & Software" },
+    { icon: `${A}/network.svg`, id: "4", name: "Business" },
+    { icon: `${A}/profile.svg`, id: "5", name: "Marketing" },
+    { icon: `${A}/net.svg`, id: "6", name: "Photography" },
 ];
 export const COURSE_TABS = [
     "Featured",
