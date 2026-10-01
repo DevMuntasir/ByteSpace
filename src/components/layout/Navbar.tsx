@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "../../data";
 
 const A = "/assets";
@@ -8,14 +8,14 @@ const NAV_ITEM_CLASS =
   "whitespace-nowrap font-brand-primary text-[clamp(14px,1.1111cqw,16px)] text-brand-text-light transition-opacity max-lg:text-sm";
 
 export function Navbar() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const pathname = usePathname();
 
   return (
-    <header className="absolute inset-x-0 top-0 z-5 h-[8.3333cqw] max-lg:h-[120px]">
+    <header className="absolute inset-x-0 top-0 z-5 mx-auto h-[8.3333cqw] max-w-[1440px] max-lg:h-[120px]">
       <div className="flex h-full items-center justify-between px-[8.3333cqw] max-lg:grid max-lg:grid-cols-[auto_1fr] max-lg:content-center max-lg:gap-x-1 max-lg:gap-y-0 max-lg:px-4 max-lg:py-3 max-[359px]:px-3.5">
         <a
           className="flex shrink-0 items-center gap-[0.5556cqw] max-lg:gap-1.5"
-          href="#"
+          href="/"
         >
           <img
             alt="ByteSpace logo"
@@ -31,12 +31,11 @@ export function Navbar() {
           aria-label="Main navigation"
           className="flex items-center gap-[1.6667cqw] max-lg:order-3 max-lg:col-span-2 max-lg:w-full max-lg:justify-center max-lg:gap-4 sm:max-lg:gap-7"
         >
-          {NAV_LINKS.map((link, index) => (
+          {NAV_LINKS.map((link) => (
             <a
-              className={`${NAV_ITEM_CLASS} inline-flex max-lg:min-h-11 max-lg:items-center ${activeIndex === index ? "font-medium leading-[1.2]" : "font-normal leading-[1.6] opacity-80 hover:opacity-100"}`}
+              className={`${NAV_ITEM_CLASS} inline-flex max-lg:min-h-11 max-lg:items-center ${(link.href === "/" ? pathname === "/" : pathname.startsWith(link.href) || (link.href === "/courses" && pathname === "/search")) ? "font-medium leading-[1.2]" : "font-normal leading-[1.6] opacity-80 hover:opacity-100"}`}
               href={link.href}
               key={link.label}
-              onClick={() => setActiveIndex(index)}
             >
               {link.label}
             </a>

@@ -69,7 +69,7 @@ export function CTASection() {
         </defs>
       </svg>
 
-      <div className="mx-auto max-w-[1440px] [container-type:inline-size]">
+      <div className="mx-auto [container-type:inline-size]">
         <div className="relative isolate h-[33.8889cqw] max-lg:h-auto">
           <div
             aria-hidden="true"
@@ -91,12 +91,12 @@ export function CTASection() {
 
           <div className="relative z-10 flex h-full flex-col items-center justify-center gap-[2.7778cqw] text-center max-lg:gap-6 max-lg:px-6 max-lg:py-20">
             <h2
-              className="w-[49.3056cqw] font-brand-heading font-semibold text-[3.0556cqw] text-brand-text-light leading-[1.2] tracking-[-0.0306cqw] max-lg:w-full max-lg:max-w-[420px] max-lg:text-[28px] max-lg:tracking-[-0.28px]"
+              className="w-[49cqw] font-brand-heading font-semibold text-[3.0556cqw] text-brand-text-light leading-[1.2] tracking-[-0.0306cqw] max-lg:w-full max-lg:max-w-[420px] max-lg:text-[28px] max-lg:tracking-[-0.28px]"
               id="cta-heading"
             >
               Unlock Your Potential as a Creator with ByteSpace
             </h2>
-            <p className="w-[66.9444cqw] font-brand-primary text-[clamp(16px,1.25cqw,18px)] text-brand-text-light leading-[1.6] max-lg:w-full max-lg:max-w-[460px] max-lg:text-base">
+            <p className="w-[50cqw] font-brand-primary text-[clamp(16px,1.25cqw,18px)] text-brand-text-light leading-[1.6] max-lg:w-full max-lg:max-w-[460px] max-lg:text-base">
               Experience the collaboration of numerous creators and an expanding
               selection of courses. Register now and become a part of a
               community comprising over 10,000 local and international creators.

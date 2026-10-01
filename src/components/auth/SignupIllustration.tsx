@@ -35,10 +35,10 @@ export function SignupIllustration() {
         </defs>
       </svg>
       <div className="absolute top-[6.25cqw] left-0 w-[373px] origin-top-left scale-[calc(100cqw/1440px)] [&>div]:border-0 [&>div]:shadow-none [&_div.relative.z-10]:bg-brand-dark [&_div.relative.z-10_span]:text-brand-text-white">
-        <CourseCard course={COURSES[1]} />
+        <CourseCard course={COURSES[1]} decorative />
       </div>
       <div className="absolute top-0 left-[7.8cqw] w-[373px] origin-top-left scale-[calc(100cqw/1440px)] [&>div]:border-0 [&>div]:shadow-none [&_div.relative.z-10]:bg-brand-dark [&_div.relative.z-10_span]:text-brand-text-white">
-        <CourseCard course={COURSES[2]} />
+        <CourseCard course={COURSES[2]} decorative />
       </div>
       <Image
         alt=""

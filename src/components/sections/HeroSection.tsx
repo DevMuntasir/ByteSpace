@@ -80,11 +80,11 @@ export function HeroSection() {
         </defs>
       </svg>
 
-      <div className="mx-auto max-w-[1440px] [container-type:inline-size]">
+      <div className="mx-auto [container-type:inline-size]">
         <div className="relative isolate h-[71.1111cqw] bg-[linear-gradient(#ffffff1f_1px,transparent_1px),linear-gradient(90deg,#ffffff1f_1px,transparent_1px)] bg-[size:8.3333cqw_8.3333cqw] max-lg:h-auto max-lg:bg-[size:64px_64px]">
           <Navbar />
 
-          <div className="relative z-3 flex flex-col items-center pt-[11.7361cqw] text-center max-lg:px-5 max-lg:pt-[144px]">
+          <div className="relative z-3 mx-auto flex max-w-[1440px] flex-col items-center pt-[11.7361cqw] text-center max-lg:px-5 max-lg:pt-[144px]">
             <h1
               className="font-brand-heading font-semibold text-[5cqw] leading-[1.2] tracking-[-0.05cqw] max-lg:max-w-[580px] max-lg:text-[clamp(30px,6.25cqw,46px)] max-lg:tracking-[-0.5px]"
               id="hero-heading"
@@ -99,7 +99,7 @@ export function HeroSection() {
 
             <search className="max-lg:w-full max-lg:max-w-[480px]">
               <form
-                action="/"
+                action="/search"
                 className="mt-[4.1667cqw] flex w-[40.4167cqw] items-center gap-[1.1111cqw] text-[clamp(16px,1.25cqw,18px)] max-lg:mt-7 max-lg:w-full max-lg:gap-2.5 max-lg:text-base"
               >
                 <div className="flex h-[3.6111cqw] min-h-12 min-w-0 flex-1 items-center gap-[0.5556cqw] rounded-full bg-white px-[1.6667cqw] text-[#82868e] focus-within:outline-2 focus-within:outline-[#cbfc01] focus-within:outline-offset-3 max-lg:h-12 max-lg:gap-2 max-lg:px-3.5">
