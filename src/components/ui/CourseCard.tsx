@@ -3,12 +3,19 @@ import { SmallAvatarGroup } from "./AvatarGroup";
 import { Badge } from "./Badge";
 
 const A = "/assets";
+const TITLE_CHARACTER_LIMIT = 22;
 
 interface CourseCardProps {
   course: Course;
 }
 
 export function CourseCard({ course }: CourseCardProps) {
+  const titleCharacters = Array.from(course.title);
+  const displayTitle =
+    titleCharacters.length > TITLE_CHARACTER_LIMIT
+      ? `${titleCharacters.slice(0, TITLE_CHARACTER_LIMIT).join("")}...`
+      : course.title;
+
   return (
     <div className="relative h-[384px] w-[373px] flex-shrink-0 overflow-hidden rounded-brand-lg border border-brand-border bg-brand-bg shadow-brand-sm transition-shadow hover:shadow-brand-card">
       {/* Thumbnail */}
@@ -31,8 +38,11 @@ export function CourseCard({ course }: CourseCardProps) {
       <div className="absolute top-[231px] left-[15px] flex flex-col gap-4">
         {/* Title & author */}
         <div className="flex flex-col">
-          <p className="font-brand-heading font-semibold text-brand-dark text-brand-lg leading-[1.2] tracking-[-0.2px]">
-            {course.title}
+          <p
+            className="font-brand-heading font-semibold text-brand-dark text-brand-lg leading-[1.2] tracking-[-0.2px]"
+            title={course.title}
+          >
+            {displayTitle}
           </p>
           <p className="font-brand-primary text-brand-text-secondary text-brand-xs leading-[1.6]">
             by{" "}
